@@ -1,7 +1,7 @@
 const profiles = {
   nabila: {
     name: "Nabila Ghaida Sigit", initials: "NGS", role: { en: "Informatics Engineering student", id: "Mahasiswi Teknik Informatika" }, location: "Tangerang",
-    phone: "0856-7759-665", email: "ghaida.sigit@gmail.com", linkedin: "https://linkedin.com/in/nabila-ghaida-98900a378", linkedinLabel: "nabila-ghaida-98900a378", cv: "assets/CV_Nabila_Ghaida_Sigit.docx",
+    phone: "0856-7759-665", email: "ghaida.sigit@gmail.com", linkedin: "https://linkedin.com/in/nabila-ghaida-98900a378", linkedinLabel: "nabila-ghaida-98900a378", cv: "assets/SBD_Kelompok_5.docx",
     summary: { en: "Informatics Engineering student with curiosity, strong learning drive, problem solving and analysis, self-reflection, perceptive understanding of situations and needs, open to new experiences and teamwork.", id: "Mahasiswi Teknik Informatika yang memiliki rasa ingin tahu, dorongan belajar yang kuat, kemampuan pemecahan masalah dan analisis, refleksi diri, pemahaman yang peka terhadap situasi dan kebutuhan, serta terbuka terhadap pengalaman baru dan kerja sama tim." },
     education: [{ period: "2025 — 2029", title: "S1 Teknik Informatika", place: "UIN Syarif Hidayatullah Jakarta" }, { period: "2021 — 2024", title: "SMA Al-Wildan 1", place: "Gading Serpong" }],
     experience: [{ period: "2026", title: { en: "K3 Division member", id: "Anggota Divisi K3" }, place: "PBAK UIN Syarif Hidayatullah Jakarta" }, { period: "2022", title: { en: "MPLS mentor", id: "Mentor MPLS" }, place: "SMA Al-Wildan 1" }, { period: "2022 — 2023", title: { en: "OSIS Social Division member", id: "Anggota Divisi Sosial OSIS" }, place: "SMA Al-Wildan 1" }],
