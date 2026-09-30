@@ -1,26 +1,48 @@
-:root[data-theme="dark"] {
-  color-scheme: dark;
-  --bg: #171b20;
-  --surface: #22282e;
-  --text: #e8e8e4;
-  --muted: #a7afb4;
-  --line: #3b4248;
-  --accent: #e3957f;
-  --accent-dark: #f0ab96;
-  --soft: #293238;
-  --shadow: 0 18px 50px rgba(0, 0, 0, .3);
+:root {
+  color-scheme: light;
+  --bg: #f3f8f7;
+  --surface: #ffffff;
+  --text: #18313a;
+  --muted: #62777d;
+  --line: #d9e5e2;
+  --accent: #087e8b;
+  --accent-dark: #06636d;
+  --soft: #e5f2ef;
+  --shadow: 0 16px 42px rgba(24, 67, 73, .1);
+  --radius: 16px;
+  --highlight: #e27755;
 }
 
-:root[data-theme="light"] {
-  color-scheme: light;
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #111d27;
+  --surface: #1b2a36;
+  --text: #edf4f3;
+  --muted: #a8b8bc;
+  --line: #344650;
+  --accent: #67d8c5;
+  --accent-dark: #087e8b;
+  --soft: #243943;
+  --shadow: 0 18px 48px rgba(0, 0, 0, .28);
+  --highlight: #ff9a76;
 }
 
 body {
   transition: background-color .2s, color .2s;
 }
 
+.container {
+  width: min(1080px, calc(100% - 48px));
+}
+
 .site-header {
-  background: rgba(244, 241, 236, .92);
+  height: 68px;
+  background: rgba(243, 248, 247, .94);
+  border-bottom-color: var(--line);
+}
+
+.header-inner {
+  height: 67px;
 }
 
 .desktop-nav a.active,
@@ -46,30 +68,177 @@ body {
   color: var(--accent);
 }
 
+.landing-hero h1 em {
+  color: var(--highlight);
+}
+
+.profile-number {
+  color: var(--highlight);
+}
+
+.landing-hero,
+.profile-hero {
+  min-height: calc(100vh - 68px);
+  padding: 72px 0;
+}
+
+.section {
+  padding: 84px 0;
+}
+
+.landing-grid,
+.profile-hero-grid {
+  gap: 64px;
+}
+
+.eyebrow {
+  margin-bottom: 14px;
+}
+
+.landing-hero h1,
+.profile-hero h1 {
+  margin-bottom: 22px;
+}
+
+.hero-actions {
+  margin-top: 26px;
+}
+
+.two-column {
+  gap: 72px;
+}
+
+.section-content {
+  padding-top: 28px;
+}
+
+.timeline {
+  margin-top: 42px;
+}
+
+.timeline-item {
+  padding: 20px 0;
+}
+
+.experience-grid,
+.profile-grid {
+  gap: 14px;
+  margin-top: 42px;
+}
+
+.experience-card {
+  min-height: 220px;
+  padding: 20px;
+}
+
+.experience-meta {
+  margin-bottom: 28px;
+}
+
+.skill-group {
+  padding: 17px 0;
+}
+
+.contact-section {
+  padding: 104px 0 112px;
+}
+
+.contact-section .eyebrow {
+  color: var(--highlight);
+}
+
+.contact-links {
+  margin-top: 32px;
+}
+
+.profile-card {
+  min-height: 230px;
+  padding: 20px;
+}
+
+.portrait-card {
+  background: linear-gradient(145deg, #ccebe4, #f8d8c9);
+}
+
+.portrait-card:before,
+.portrait-card:after {
+  border-color: rgba(24, 67, 73, .18);
+}
+
 :root[data-theme="dark"] .site-header {
-  background: rgba(23, 27, 32, .92);
-  border-bottom-color: var(--line);
+  background: rgba(17, 29, 39, .94);
 }
 
 :root[data-theme="dark"] .portrait-card {
-  background: linear-gradient(145deg, #354942, #67463e);
+  background: linear-gradient(145deg, #27564f, #754b41);
 }
 
 :root[data-theme="dark"] .portrait-card:before,
 :root[data-theme="dark"] .portrait-card:after {
-  border-color: rgba(255, 255, 255, .18);
+  border-color: rgba(255, 255, 255, .2);
 }
 
 :root[data-theme="dark"] .portrait-caption {
-  color: #e8e8e4;
+  color: #edf4f3;
+}
+
+:root[data-theme="dark"] .button-primary {
+  background: #087e8b;
+  color: #fff;
+}
+
+:root[data-theme="dark"] .button-primary:hover {
+  background: #06636d;
 }
 
 :root[data-theme="dark"] .contact-section,
 :root[data-theme="dark"] .site-footer {
-  background: #0e1216;
-  color: #e8e8e4;
+  background: #0b151d;
+  color: #edf4f3;
 }
 
 :root[data-theme="dark"] .footer-inner a {
-  color: #e8e8e4;
+  color: #edf4f3;
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: min(100% - 36px, 600px);
+  }
+
+  .landing-hero,
+  .profile-hero {
+    min-height: auto;
+    padding: 64px 0 72px;
+  }
+
+  .landing-grid,
+  .profile-hero-grid {
+    gap: 36px;
+  }
+
+  .section {
+    padding: 64px 0;
+  }
+
+  .two-column {
+    gap: 28px;
+  }
+
+  .section-content {
+    padding-top: 0;
+  }
+
+  .timeline {
+    margin-top: 34px;
+  }
+
+  .experience-grid,
+  .profile-grid {
+    margin-top: 34px;
+  }
+
+  .contact-section {
+    padding: 76px 0 84px;
+  }
 }
