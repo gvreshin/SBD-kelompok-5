@@ -26,8 +26,8 @@ const profiles = {
 };
 
 const translations = {
-  en: { navHome: "Home", about: "Profile", education: "Education", experience: "Experience", skills: "Skills", contact: "Contact", summary: "Profile", contactMe: "Contact", download: "Download CV", based: "Based in", educationTitle: "Learning with intention.", experienceTitle: "Experience in practice.", skillsTitle: "Capabilities that matter.", contactTitle: "Let’s start a conversation.", contactCopy: "For opportunities, questions, or meaningful collaboration, please use the contact details below.", verified: "Verified CV information only.", home: "Home", eyebrow: "Three paths, one shared beginning", title: "Our Internship Portfolio.", intro: "Explore three independent profiles, shaped by learning, responsibility, and a readiness to contribute.", note: "Select a profile to view verified CV information.", profiles: "Profiles", choose: "Meet the people.", nabila: "Informatics Engineering student", najwa: "Informatics Engineering student", wisnu: "Food and beverage manager" },
-  id: { navHome: "Beranda", about: "Profil", education: "Pendidikan", experience: "Pengalaman", skills: "Keahlian", contact: "Kontak", summary: "Profil", contactMe: "Hubungi", download: "Unduh CV", based: "Berbasis di", educationTitle: "Belajar dengan tujuan.", experienceTitle: "Pengalaman dalam praktik.", skillsTitle: "Keahlian yang berarti.", contactTitle: "Mari mulai percakapan.", contactCopy: "Untuk kesempatan, pertanyaan, atau kolaborasi yang bermakna, silakan gunakan detail kontak di bawah.", verified: "Hanya informasi CV terverifikasi.", home: "Beranda", eyebrow: "Tiga perjalanan, satu awal bersama", title: "Portofolio Magang Kami.", intro: "Jelajahi tiga profil terpisah yang dibentuk oleh pembelajaran, tanggung jawab, dan kesiapan untuk berkontribusi.", note: "Pilih profil untuk melihat informasi CV terverifikasi.", profiles: "Profil", choose: "Kenali mereka.", nabila: "Mahasiswi Teknik Informatika", najwa: "Mahasiswi Teknik Informatika", wisnu: "Manajer makanan dan minuman" }
+  en: { navHome: "Home", themeToDark: "Switch to dark mode", themeToLight: "Switch to light mode", about: "Profile", education: "Education", experience: "Experience", skills: "Skills", contact: "Contact", summary: "Profile", contactMe: "Contact", download: "Download CV", based: "Based in", educationTitle: "Learning with intention.", experienceTitle: "Experience in practice.", skillsTitle: "Capabilities that matter.", contactTitle: "Let’s start a conversation.", contactCopy: "For opportunities, questions, or meaningful collaboration, please use the contact details below.", verified: "Verified CV information only.", home: "Home", eyebrow: "Three paths, one shared beginning", title: "Our Internship Portfolio.", intro: "Explore three independent profiles, shaped by learning, responsibility, and a readiness to contribute.", note: "Select a profile to view verified CV information.", profiles: "Profiles", choose: "Meet the people.", nabila: "Informatics Engineering student", najwa: "Informatics Engineering student", wisnu: "Food and beverage manager" },
+  id: { navHome: "Beranda", themeToDark: "Ganti ke mode gelap", themeToLight: "Ganti ke mode terang", about: "Profil", education: "Pendidikan", experience: "Pengalaman", skills: "Keahlian", contact: "Kontak", summary: "Profil", contactMe: "Hubungi", download: "Unduh CV", based: "Berbasis di", educationTitle: "Belajar dengan tujuan.", experienceTitle: "Pengalaman dalam praktik.", skillsTitle: "Keahlian yang berarti.", contactTitle: "Mari mulai percakapan.", contactCopy: "Untuk kesempatan, pertanyaan, atau kolaborasi yang bermakna, silakan gunakan detail kontak di bawah.", verified: "Hanya informasi CV terverifikasi.", home: "Beranda", eyebrow: "Tiga perjalanan, satu awal bersama", title: "Portofolio Magang Kami.", intro: "Jelajahi tiga profil terpisah yang dibentuk oleh pembelajaran, tanggung jawab, dan kesiapan untuk berkontribusi.", note: "Pilih profil untuk melihat informasi CV terverifikasi.", profiles: "Profil", choose: "Kenali mereka.", nabila: "Mahasiswi Teknik Informatika", najwa: "Mahasiswi Teknik Informatika", wisnu: "Manajer makanan dan minuman" }
 };
 
 let language = localStorage.getItem("portfolio-language") || "en";
@@ -35,7 +35,8 @@ const t = (key) => translations[language][key];
 const text = (value) => typeof value === "string" ? value : value[language];
 
 function header(active) {
-  return `<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="container header-inner"><a class="brand" href="index.html"><span class="brand-mark">OI</span><span>Our Internship Portfolio</span></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="index.html">${t("navHome")}</a><a class="${active === "nabila" ? "active" : ""}" href="nabila.html">Nabila</a><a class="${active === "najwa" ? "active" : ""}" href="najwaturrohmah.html">Najwaturrohmah</a><a class="${active === "wisnu" ? "active" : ""}" href="wisnu.html">Wisnu</a></nav><div class="header-actions"><button class="language-toggle" id="language-toggle" type="button" aria-label="Switch language"><b>${language === "en" ? "EN" : "ID"}</b><span>/</span><span>${language === "en" ? "ID" : "EN"}</span></button><button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button></div></div><nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation"><a href="index.html">${t("navHome")}</a><a href="nabila.html">Nabila</a><a href="najwaturrohmah.html">Najwaturrohmah</a><a href="wisnu.html">Wisnu</a></nav></header>`;
+  const navLink = (key, label, href) => `<a class="${active === key ? "active" : ""}" href="${href}"${active === key ? ' aria-current="page"' : ""}>${label}</a>`;
+  return `<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="container header-inner"><a class="brand" href="index.html"><span class="brand-mark">OI</span><span>Our Internship Portfolio</span></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="index.html">${t("navHome")}</a>${navLink("nabila", "Nabila", "nabila.html")}${navLink("najwa", "Najwaturrohmah", "najwaturrohmah.html")}${navLink("wisnu", "Wisnu", "wisnu.html")}</nav><div class="header-actions"><button class="theme-toggle" id="theme-toggle" type="button" aria-label="${t("themeToDark")}" title="${t("themeToDark")}">☾</button><button class="language-toggle" id="language-toggle" type="button" aria-label="Switch language"><b>${language === "en" ? "EN" : "ID"}</b><span>/</span><span>${language === "en" ? "ID" : "EN"}</span></button><button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button></div></div><nav class="mobile-menu" id="mobile-menu" aria-label="Primary navigation"><a href="index.html">${t("navHome")}</a>${navLink("nabila", "Nabila", "nabila.html")}${navLink("najwa", "Najwaturrohmah", "najwaturrohmah.html")}${navLink("wisnu", "Wisnu", "wisnu.html")}</nav></header>`;
 }
 
 function profileMarkup(key) {
@@ -52,10 +53,26 @@ function profileMarkup(key) {
 function setup() {
   const page = document.body.dataset.page;
   if (page === "profile") document.querySelector("#app").innerHTML = profileMarkup(document.body.dataset.profile);
+  const theme = localStorage.getItem("portfolio-theme") || "light";
+  document.documentElement.dataset.theme = theme;
   document.documentElement.lang = language;
   document.querySelectorAll("[data-i18n]").forEach((el) => { const key = el.dataset.i18n.split(".").pop(); if (translations[language][key]) el.textContent = translations[language][key]; });
   document.querySelector("#year").textContent = new Date().getFullYear();
   document.querySelector("#language-toggle").addEventListener("click", () => { localStorage.setItem("portfolio-language", language === "en" ? "id" : "en"); location.reload(); });
+  const themeToggle = document.querySelector("#theme-toggle");
+  const updateThemeToggle = () => {
+    const dark = document.documentElement.dataset.theme === "dark";
+    themeToggle.textContent = dark ? "☀" : "☾";
+    themeToggle.setAttribute("aria-label", t(dark ? "themeToLight" : "themeToDark"));
+    themeToggle.title = t(dark ? "themeToLight" : "themeToDark");
+  };
+  updateThemeToggle();
+  themeToggle.addEventListener("click", () => {
+    const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = nextTheme;
+    localStorage.setItem("portfolio-theme", nextTheme);
+    updateThemeToggle();
+  });
   const menu = document.querySelector("#mobile-menu"), toggle = document.querySelector("#menu-toggle");
   toggle.addEventListener("click", () => { const open = menu.classList.toggle("open"); toggle.setAttribute("aria-expanded", String(open)); });
   menu.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => { menu.classList.remove("open"); toggle.setAttribute("aria-expanded", "false"); }));

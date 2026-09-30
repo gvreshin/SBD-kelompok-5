@@ -1,0 +1,75 @@
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #171b20;
+  --surface: #22282e;
+  --text: #e8e8e4;
+  --muted: #a7afb4;
+  --line: #3b4248;
+  --accent: #e3957f;
+  --accent-dark: #f0ab96;
+  --soft: #293238;
+  --shadow: 0 18px 50px rgba(0, 0, 0, .3);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+body {
+  transition: background-color .2s, color .2s;
+}
+
+.site-header {
+  background: rgba(244, 241, 236, .92);
+}
+
+.desktop-nav a.active,
+.mobile-menu a.active {
+  color: var(--accent);
+}
+
+.mobile-menu a.active {
+  font-weight: 700;
+}
+
+.theme-toggle {
+  border: 0;
+  background: none;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 19px;
+  line-height: 1;
+  padding: 4px;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+}
+
+:root[data-theme="dark"] .site-header {
+  background: rgba(23, 27, 32, .92);
+  border-bottom-color: var(--line);
+}
+
+:root[data-theme="dark"] .portrait-card {
+  background: linear-gradient(145deg, #354942, #67463e);
+}
+
+:root[data-theme="dark"] .portrait-card:before,
+:root[data-theme="dark"] .portrait-card:after {
+  border-color: rgba(255, 255, 255, .18);
+}
+
+:root[data-theme="dark"] .portrait-caption {
+  color: #e8e8e4;
+}
+
+:root[data-theme="dark"] .contact-section,
+:root[data-theme="dark"] .site-footer {
+  background: #0e1216;
+  color: #e8e8e4;
+}
+
+:root[data-theme="dark"] .footer-inner a {
+  color: #e8e8e4;
+}
