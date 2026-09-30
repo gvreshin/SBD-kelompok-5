@@ -31,6 +31,76 @@ body {
   transition: background-color .2s, color .2s;
 }
 
+body[data-page="profile"][data-profile="najwa"] {
+  --bg: #fff5f8;
+  --surface: #fffdfd;
+  --text: #4c2e3f;
+  --muted: #7b5868;
+  --line: #f2d9e2;
+  --accent: #dd88a8;
+  --accent-dark: #bf5d83;
+  --soft: #fbeaf0;
+  --shadow: 0 18px 44px rgba(146, 82, 104, .14);
+  --highlight: #d97ca4;
+}
+
+body[data-page="profile"][data-profile="najwa"] .site-header,
+body[data-page="profile"][data-profile="najwa"] .site-footer,
+body[data-page="profile"][data-profile="najwa"] .contact-section {
+  background: rgba(255, 245, 248, .94);
+}
+
+body[data-page="profile"][data-profile="najwa"] .contact-section,
+body[data-page="profile"][data-profile="najwa"] .site-footer {
+  color: var(--text);
+}
+
+body[data-page="profile"][data-profile="najwa"] .contact-section .eyebrow,
+body[data-page="profile"][data-profile="najwa"] .eyebrow,
+body[data-page="profile"][data-profile="najwa"] .profile-number,
+body[data-page="profile"][data-profile="najwa"] .landing-hero h1 em,
+body[data-page="profile"][data-profile="najwa"] .initials,
+body[data-page="profile"][data-profile="najwa"] .arrow {
+  color: var(--accent);
+}
+
+body[data-page="profile"][data-profile="najwa"] .button-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+body[data-page="profile"][data-profile="najwa"] .button-primary:hover {
+  background: var(--accent-dark);
+}
+
+body[data-page="profile"][data-profile="najwa"] .portrait-card {
+  background: linear-gradient(145deg, #fde6ee, #f7d7e6);
+}
+
+body[data-page="profile"][data-profile="najwa"] .portrait-card:before,
+body[data-page="profile"][data-profile="najwa"] .portrait-card:after {
+  border-color: rgba(114, 59, 76, .18);
+}
+
+body[data-page="home"] a.profile-card[href="najwaturrohmah.html"],
+body[data-page="home"] nav a[href="najwaturrohmah.html"] {
+  color: var(--text);
+}
+
+body[data-page="home"] a.profile-card[href="najwaturrohmah.html"] {
+  background: #fff8fb;
+  border-color: #f2d9e2;
+  box-shadow: 0 12px 28px rgba(217, 124, 164, .12);
+}
+
+body[data-page="home"] a.profile-card[href="najwaturrohmah.html"] .initials,
+body[data-page="home"] a.profile-card[href="najwaturrohmah.html"] .arrow,
+body[data-page="home"] a.profile-card[href="najwaturrohmah.html"] .profile-number,
+body[data-page="home"] nav a[href="najwaturrohmah.html"].active,
+body[data-page="home"] nav a[href="najwaturrohmah.html"]:hover {
+  color: #d76d95;
+}
+
 .container {
   width: min(1080px, calc(100% - 48px));
 }
