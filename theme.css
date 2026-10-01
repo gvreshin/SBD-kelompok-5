@@ -32,22 +32,25 @@ body {
 }
 
 body[data-page="profile"][data-profile="najwa"] {
-  --bg: #fff5f8;
-  --surface: #fffdfd;
-  --text: #4c2e3f;
-  --muted: #7b5868;
-  --line: #f2d9e2;
-  --accent: #dd88a8;
-  --accent-dark: #bf5d83;
-  --soft: #fbeaf0;
-  --shadow: 0 18px 44px rgba(146, 82, 104, .14);
-  --highlight: #d97ca4;
+  --bg: #fff4f8;
+  --surface: #fffafd;
+  --text: #482d3b;
+  --muted: #806373;
+  --line: #f1d8e3;
+  --accent: #d979a0;
+  --accent-dark: #b9547e;
+  --soft: #fce8f0;
+  --shadow: 0 18px 44px rgba(153, 78, 111, .12);
+  --highlight: #ca668f;
+  background:
+    radial-gradient(ellipse at 82% 12%, rgba(250, 213, 228, .27), transparent 30rem),
+    var(--bg);
 }
 
 body[data-page="profile"][data-profile="najwa"] .site-header,
 body[data-page="profile"][data-profile="najwa"] .site-footer,
 body[data-page="profile"][data-profile="najwa"] .contact-section {
-  background: rgba(255, 245, 248, .94);
+  background: rgba(255, 244, 248, .94);
 }
 
 body[data-page="profile"][data-profile="najwa"] .contact-section,
@@ -74,12 +77,179 @@ body[data-page="profile"][data-profile="najwa"] .button-primary:hover {
 }
 
 body[data-page="profile"][data-profile="najwa"] .portrait-card {
-  background: linear-gradient(145deg, #fde6ee, #f7d7e6);
+  background:
+    radial-gradient(circle at 25% 18%, rgba(255, 255, 255, .8), transparent 34%),
+    linear-gradient(145deg, #f9dce8, #f5c9dc);
+  border: 1px solid rgba(214, 121, 160, .18);
 }
 
 body[data-page="profile"][data-profile="najwa"] .portrait-card:before,
 body[data-page="profile"][data-profile="najwa"] .portrait-card:after {
-  border-color: rgba(114, 59, 76, .18);
+  border-color: rgba(169, 85, 120, .18);
+}
+
+body[data-page="profile"][data-profile="najwa"] .brand-mark {
+  background: var(--accent);
+  color: #fff;
+}
+
+body[data-page="profile"][data-profile="najwa"] .site-header {
+  border-bottom-color: rgba(241, 216, 227, .85);
+  box-shadow: 0 5px 22px rgba(153, 78, 111, .04);
+}
+
+body[data-page="profile"][data-profile="najwa"] .profile-hero {
+  background:
+    radial-gradient(ellipse at 78% 46%, rgba(249, 220, 232, .42), transparent 32rem),
+    linear-gradient(180deg, rgba(255, 250, 252, .55), transparent 78%);
+}
+
+body[data-page="profile"][data-profile="najwa"] .button-primary {
+  box-shadow: 0 8px 18px rgba(185, 84, 126, .18);
+}
+
+body[data-page="profile"][data-profile="najwa"] .button-secondary {
+  border-color: #efcfdd;
+  background: rgba(255, 250, 252, .86);
+}
+
+body[data-page="profile"][data-profile="najwa"] .timeline-item {
+  border-top-color: var(--line);
+}
+
+body[data-page="profile"][data-profile="najwa"] .timeline-date {
+  color: var(--accent-dark);
+}
+
+body[data-page="profile"][data-profile="najwa"] .experience-card {
+  border-color: #f1d8e3;
+  background: linear-gradient(155deg, #fffafd, #fff7fa);
+  box-shadow: 0 10px 28px rgba(153, 78, 111, .05);
+}
+
+body[data-page="profile"][data-profile="najwa"] .experience-card:hover {
+  border-color: #e8b6ca;
+  box-shadow: 0 16px 34px rgba(153, 78, 111, .11);
+}
+
+body[data-page="profile"][data-profile="najwa"] .skill-group {
+  border-top-color: var(--line);
+}
+
+body[data-page="profile"][data-profile="najwa"] .skill-pills span {
+  background: #fbe8f0;
+  color: #704457;
+  border: 1px solid rgba(241, 216, 227, .9);
+}
+
+body[data-page="profile"][data-profile="najwa"] .contact-section {
+  background:
+    radial-gradient(ellipse at 88% 10%, rgba(248, 207, 224, .65), transparent 28rem),
+    linear-gradient(135deg, #fcebf2, #f8e2eb);
+  color: var(--text);
+}
+
+body[data-page="profile"][data-profile="najwa"] .contact-section p:not(.eyebrow),
+body[data-page="profile"][data-profile="najwa"] .linkedin-link {
+  color: var(--muted);
+}
+
+body[data-page="profile"][data-profile="najwa"] .contact-email,
+body[data-page="profile"][data-profile="najwa"] .contact-phone {
+  border-bottom-color: var(--accent);
+}
+
+body[data-page="profile"][data-profile="najwa"] .site-footer {
+  border-top-color: #efd5e0;
+}
+
+body[data-page="profile"][data-profile="najwa"] .footer-inner a {
+  color: var(--accent-dark);
+}
+
+body[data-page="profile"][data-profile="najwa"] .mobile-menu.open {
+  border-top-color: var(--line);
+}
+
+:root[data-theme="dark"] body[data-page="profile"][data-profile="najwa"] {
+  --bg: #241722;
+  --surface: #322131;
+  --text: #fff0f7;
+  --muted: #d0b1c2;
+  --line: #59364e;
+  --accent: #f08fba;
+  --accent-dark: #f7b5d1;
+  --soft: #43273a;
+  --shadow: 0 18px 44px rgba(0, 0, 0, .28);
+  --highlight: #ff9fc8;
+  background:
+    radial-gradient(ellipse at 82% 12%, rgba(190, 82, 134, .2), transparent 30rem),
+    var(--bg);
+}
+
+:root[data-theme="dark"] body[data-page="profile"][data-profile="najwa"] .site-header {
+  background: rgba(33, 23, 33, .94);
+  border-bottom-color: var(--line);
+}
+
+:root[data-theme="dark"] body[data-page="profile"][data-profile="najwa"] .profile-hero {
+  background:
+    radial-gradient(ellipse at 78% 46%, rgba(112, 58, 88, .24), transparent 32rem),
+    linear-gradient(180deg, rgba(45, 32, 45, .4), transparent 78%);
+}
+
+:root[data-theme="dark"] body[data-page="profile"][data-profile="najwa"] .portrait-card {
+  background:
+    radial-gradient(circle at 25% 18%, rgba(255, 255, 255, .12), transparent 34%),
+    linear-gradient(145deg, #694258, #493044);
+}
+
+:root[data-theme="dark"] body[data-page="profile"][data-profile="najwa"] .portrait-caption {
+  color: var(--text);
+}
+
+:root[data-theme="dark"] body[data-page="profile"][data-profile="najwa"] .experience-card {
+  background: linear-gradient(155deg, #382638, #302130);
+  border-color: var(--line);
+}
+
+:root[data-theme="dark"] body[data-page="profile"][data-profile="najwa"] .button-primary {
+  background: var(--accent);
+  color: #321927;
+  box-shadow: 0 8px 22px rgba(240, 143, 186, .2);
+}
+
+:root[data-theme="dark"] body[data-page="profile"][data-profile="najwa"] .button-primary:hover {
+  background: var(--accent-dark);
+}
+
+:root[data-theme="dark"] body[data-page="profile"][data-profile="najwa"] .button-secondary {
+  background: #382638;
+  border-color: var(--line);
+}
+
+:root[data-theme="dark"] body[data-page="profile"][data-profile="najwa"] .skill-pills span {
+  background: var(--soft);
+  color: var(--text);
+  border-color: var(--line);
+}
+
+:root[data-theme="dark"] body[data-page="profile"][data-profile="najwa"] .contact-section {
+  background:
+    radial-gradient(ellipse at 88% 10%, rgba(190, 82, 134, .28), transparent 28rem),
+    linear-gradient(135deg, #382638, #2c1e2c);
+  color: var(--text);
+}
+
+:root[data-theme="dark"] body[data-page="profile"][data-profile="najwa"] .contact-section p:not(.eyebrow),
+:root[data-theme="dark"] body[data-page="profile"][data-profile="najwa"] .linkedin-link {
+  color: var(--muted);
+}
+
+:root[data-theme="dark"] body[data-page="profile"][data-profile="najwa"] .site-footer {
+  background: #211721;
+  border-top-color: var(--line);
+  color: var(--muted);
 }
 
 body[data-page="home"] a.profile-card[href="najwaturrohmah.html"],
